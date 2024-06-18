@@ -1,9 +1,14 @@
-import Image from "next/image";
-
-export default function Home() {
+import React from "react";
+import Slider from "./components/Slider";
+// import Copy from "./copy/page"
+function page() {
+  
   return (
-    <>
-      <p>Hello Learning nextjs</p>
-    </>
+    <div>
+      <Slider />
+      {/* <Copy /> */}
+    </div>
   );
 }
+
+export default page;
