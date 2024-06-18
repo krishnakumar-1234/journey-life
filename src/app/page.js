@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "./components/Slider";
+import GalleryPage from "./Gallery/page";
 // import Copy from "./copy/page"
 function page() {
   
@@ -7,6 +8,7 @@ function page() {
     <div>
       <Slider />
       {/* <Copy /> */}
+      <GalleryPage />
     </div>
   );
 }

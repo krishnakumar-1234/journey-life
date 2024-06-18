@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
-// import { useSession, signIn, signOut } from "next-auth/react";
+
 function page() {
   const [LearningWeb, setLearningWeb] = useState({
     name: "",
@@ -12,20 +12,17 @@ function page() {
     ProfilePic: "",
   });
 
+  const router = useRouter();
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setLearningWeb((prevData) => ({ ...prevData, [id]: value }));
   };
 
-  const handleFileChange = (e) => {
-    const { id, files } = e.target;
-    setLearningWeb((prevData) => ({ ...prevData, [id]: files[0].name }));
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("LearningWeb", JSON.stringify(LearningWeb));
-    toast("  saved!", {
+    toast.success("Data saved!", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -37,8 +34,7 @@ function page() {
     });
   };
 
-  // Simple i can access in any where in the my next js directory
-  //   const [LearningWeb, setLearningWeb] = useState(null);
+
   useEffect(() => {
     const savedData = localStorage.getItem("LearningWeb");
     if (savedData) {
@@ -114,7 +110,6 @@ function page() {
           <label htmlFor="ProfilePic">
             <p className="pl-2 text-1xl text-white pb-2">Profile pic</p>
             <input
-              required
               className="w-[750px] mx-auto text-white justify-between py-2 pl-2 text-white-700 border border-gray-200 rounded-lg sm:flex sm:px-5 bg-gray-50 bg-gray-800 border-gray-700 width100in700widthofDievice"
               type="text"
               id="ProfilePic"

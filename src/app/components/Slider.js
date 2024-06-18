@@ -12,19 +12,19 @@ function Slider() {
       alt: "Carousel Image 1",
     },
     {
-      src: "/image8.webp",
+      src: "/240_F_630366533_BVQZc4yhAOnJwwdEreMah5m3C5JzOkKE.jpg",
       alt: "Carousel Image 2",
     },
     {
-      src: "/image9.webp",
+      src: "/matt-foxx-IUY_3DvM__w-unsplash.jpeg",
       alt: "Carousel Image 3",
     },
     {
-      src: "/image10.webp",
+      src: "/maxime-horlaville-CSWllKT9wPw-unsplash.jpeg",
       alt: "Carousel Image 4",
     },
     {
-      src: "/roshani.webp",
+      src: "/nico-smit-QnkzvFCxKrA-unsplash.jpeg",
       alt: "Carousel Image 5",
     },
   ];

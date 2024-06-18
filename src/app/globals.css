@@ -32,3 +32,8 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .width100in700widthofDievice {
+    width: 100%;
+  }
+}
