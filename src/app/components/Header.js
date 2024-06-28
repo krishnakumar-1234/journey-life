@@ -57,11 +57,11 @@ function Header() {
       <header className="w-full h-[60px] bg-gray-800 flex items-center p-4 justify-between">
         <div>
           <Link href="/">
-            <Image
+            <img
               width={45}
               height={45}
               className="rounded-full"
-              src="/logo.png"
+              src="https://static.vecteezy.com/system/resources/previews/005/076/592/non_2x/hacker-mascot-for-sports-and-esports-logo-free-vector.jpg"
               alt="logo"
             />
           </Link>
@@ -70,7 +70,9 @@ function Header() {
           <div className="hidden md:flex gap-6">
             <Link href="#">Coding</Link>
             <Link href="#">Study</Link>
+            {LearningWeb && <Link href="/TodosApp">Todos</Link>}
             {LearningWeb && <Link href="/login">Dashboard</Link>}
+            {LearningWeb && <Link href="/Gallery">Gallery</Link>}
           </div>
           {!LearningWeb && (
             <Link href="/login">
@@ -110,6 +112,16 @@ function Header() {
                   <Link href="/login" className="w-[100%]">
                     <button className="w-full text-left block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
                       Dashboard
+                    </button>
+                  </Link>
+                  <Link href="/TodosApp" className="w-[100%]">
+                    <button className="w-full text-left block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                      TodosApp
+                    </button>
+                  </Link>
+                  <Link href="/Gallery" className="w-[100%]">
+                    <button className="w-full text-left block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                      Gallery
                     </button>
                   </Link>
                   <button

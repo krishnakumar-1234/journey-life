@@ -18,22 +18,111 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 @media (max-width: 600px) {
   .width100in700widthofDievice {
     width: 100%;
   }
+}
+
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #414141;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+} */
+.linehight {
+  line-height: 30px;
+  font-size: 1.20em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heainggiftpage {
+  font-size: 2.20em;
+  line-height: 45px;
+}
+.sidebarInTodos {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+}
+.listInsidefile {
+  cursor: pointer;
+  border-bottom: 2px solid #1f2937;
+}
+.listInsidefile:hover {
+  background-color: #1f2937;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  filter: invert(2);
+  background-color: green;
+}
+.borderinside {
+  /* border-top: 2px solid #0b84ff; */
+  border: 1px solid #1f2937;
+}
+.selectedFileList {
+  margin: 8px;
+  border-radius: 4px;
+  animation-name: animtion;
+  animation-duration: 0.30s;
+  animation-iteration-count: calc(1);
+  border-bottom: 1px solid #1f2937;
+}
+.selectedFileList:hover {
+  background-color: #374151;
+  margin: 8px;
+  border-radius: 4px;
+  
+}
+.datetracker {
+  font-size: 14px;
+}
+
+.booksIcons {
+  background-color: greenyellow;
+
+}
+@keyframes animtion {
+  0% {
+    transform: translate(-200px);
+  }
+  100% {
+
+    transform: translate(00px);
+  }
+}
+.rightvaluestodosShowUp {
+  overflow: scroll;
+}
+.rightvaluestodosShowUp::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+.rightvaluestodosShowUp::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+.rightvaluestodosShowUp::-webkit-scrollbar {
+  width: 0px;
+  height: 2px;
+  border-radius: 100px;
+}
+.invert {
+  filter: invert(2);
 }

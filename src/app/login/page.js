@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
 
+
 function page() {
   const [LearningWeb, setLearningWeb] = useState({
     name: "",
@@ -11,6 +12,7 @@ function page() {
     password: "",
     ProfilePic: "",
   });
+
 
   const router = useRouter();
 

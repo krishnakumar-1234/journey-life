@@ -45,8 +45,8 @@ function GalleryPage() {
   return (
     <>
       <ToastContainer />
-      <div className="flex p-5 text-white">
-        <p className="text-3xl">Your Gallery Upload image</p>
+      <div className="flex p-5 pb-0 text-white">
+        <p className="text-3xl text-bold">Your Gallery Upload image</p>
       </div>
       <div className="container mx-auto p-5">
         <div className="mb-5">
@@ -54,7 +54,7 @@ function GalleryPage() {
             type="file"
             accept="image/*"
             onChange={handleUpload}
-            className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            className="invert p-1 flex items-center justify-center bg-black-500 w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer focus:outline-none "
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -63,12 +63,12 @@ function GalleryPage() {
               <img
                 src={image.url}
                 alt="User Upload"
-                className="w-full h-56 object-cover rounded-lg cursor-pointer"
+                className="w-full h-56 object-cover rounded-lg border border-gray-500 cursor-pointer"
                 onClick={() => openModal(image)}
               />
               <button
                 onClick={() => handleDelete(image.id)}
-                className="absolute top-2 right-2 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                className="absolute top-2 right-2 text-white g-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300"
               >
                 Delete
               </button>
@@ -91,7 +91,7 @@ function GalleryPage() {
             />
             <button
               onClick={closeModal}
-              className="absolute top-2 right-2 bg-red-600 text-white px-4 py-2 rounded-lg"
+              className="fixed top-5 right-4 bg-red-600 text-white px-4 py-2 rounded-lg"
             >
               Close
             </button>
